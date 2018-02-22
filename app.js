@@ -1,3 +1,5 @@
+mongoose.connect(process.env.MONGODB_URI)
+const mongoose = require('mongoose')
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
