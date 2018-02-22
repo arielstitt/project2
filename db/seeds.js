@@ -5,8 +5,8 @@ const db = mongoose.connection
 
 // MODEL IMPORT: un-comment after models folder is created and test
 
-// const Shelter = require('../models/child')
-// const Child = require('../models/shelter')
+const Shelter = require('../models/child')
+const Child = require('../models/shelter')
 
 
 
