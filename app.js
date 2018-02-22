@@ -27,6 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+//REQUIRE THE CONTROLLER
+
+const shelterController = require('./controllers/shelterController')
+const childController = require('./controllers/childController')
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
