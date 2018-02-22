@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const shelterSchema = mongoose.Schema
+const shelterSchema = require('./shelterSchema')
 
 const shelterSchema = new Schema({
     addressNumber: Number,
@@ -13,4 +13,4 @@ const shelterSchema = new Schema({
 
 
 
-modules.export = shelterSchema
+module.export = shelterSchema

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Schemas = mongoose.Schema
+const Schema = mongoose.Schema
 const childSchema = require('./childSchema')
 
 const childSchema = new Schema({
