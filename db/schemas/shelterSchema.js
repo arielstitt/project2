@@ -8,7 +8,7 @@ const shelterSchema = new Schema({
     streetName: String, 
     state: String,
     city: String,  
-    children: [Array]
+    // children: [Array]
 })
 
 
