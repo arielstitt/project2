@@ -44,7 +44,7 @@ app.use(methodOverride('_method'))
 // FIRST ARGUMENT: entry point for the controller
 // SECOND ARGUMENT: the controller itself
 app.use('/', index);
-app.use('/user', userController);
+app.use('/users', userController);
 app.use('/shelters', shelterController)
 // app.use('/shelters/:shelterId/children', childrenController)
 // app.use('')

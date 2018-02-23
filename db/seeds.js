@@ -41,10 +41,11 @@ const athena = new Shelter({
 
 // remove all shelters
 Shelter.remove().then(()=>{
+    console.log("removed all things")
     //save multiple shelters to the database
     //return Shelter.insertMany([athena])
     console.log(athena)
-    athena.save()
+    return athena.save()
 })
 .then(()=>{
     //close the database
