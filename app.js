@@ -36,8 +36,13 @@ app.use('/users', users);
 const shelterController = require('./controllers/shelterController')
 const childController = require('./controllers/childController')
 
+// FIRST ARGUMENT: entry point for the controller
+// SECOND ARGUMENT: the controller itself
+
+
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function(req, res) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);

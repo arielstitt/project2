@@ -1,7 +1,6 @@
 const express = require('express')
-
 const router = express.Router()
-
+const Shelter = require('../models/shelter')
 
 // NEW
 // GET

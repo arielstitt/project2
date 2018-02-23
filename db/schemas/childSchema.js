@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const childSchema = require('./childSchema')
+const shelterSchema = require('./shelterSchema')
 
 const childSchema = new Schema({
-    firstName: string,
-    lastName: string,
-    age: number
+    firstName: String,
+    lastName: String,
+    age: Number
 })
 
 
 
 
-module.export = childSchema
+module.exports = childSchema
