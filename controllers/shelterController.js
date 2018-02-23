@@ -5,9 +5,6 @@ const Shelter = require('../models/shelter')
 const User = require('../models/user')
 
 //index
-
-// NEW
-// GET
 router.get('/', (req, res)=>{
     //get all shelters
     Shelter.find().then((shelters)=>{
@@ -17,6 +14,13 @@ router.get('/', (req, res)=>{
         })
     })
 })
+// NEW
+// GET
+router.get('/new', (req, res) => {
+
+    // Just render a view, we don't need to inject any data from our server here
+    res.render('shelter/new')
+  })
 // CREATE
 // POST
 

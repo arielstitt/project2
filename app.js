@@ -50,8 +50,8 @@ app.use('/shelters', shelterController)
 // app.use('')
 
 // catch 404 and forward to error handler
-app.use(function(req, res) {
-  var err = new Error('Not Found');
+app.use(function(req, res, next) {
+  var err = new Error('Oh shit! Whet happend?');
   err.status = 404;
   next(err);
 });

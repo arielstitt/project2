@@ -1,0 +1,40 @@
+<h1>Add a New Shelter</h1>
+
+<form method="POST" action="/shelters">
+  
+  <div>
+    <label for="name">Name of Shelter</label>
+    <input type="text" name="name">
+  </div>
+  
+  <div>
+    <label for="adressNumber">Address Number</label>
+    <input type="text" name="addressNumber">
+  </div>
+  
+  <div>
+    <label for="streetName">Street Name</label>
+    <input type="text" name="streetName">
+  </div>
+
+  <div>
+    <label for="state">State</label>
+    <input type="text" name="state">
+  </div>
+
+  <div>
+    <label for="city">City</label>
+    <input type="text" name="city">
+  </div>
+  
+
+</form>
+
+<a href="/shelters"><button type="submit">Add Shelter</button></a>
+
+
+    {{!-- addressNumber: Number,
+    streetName: String, 
+    state: String,
+    city: String,  
+    children: [Array] --}}
