@@ -1,6 +1,8 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams: true})
+
 const Shelter = require('../models/shelter')
+const User = require('../models/user')
 
 // NEW
 // GET
