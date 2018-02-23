@@ -23,7 +23,23 @@ router.get('/new', (req, res) => {
   })
 // CREATE
 // POST
+// save new shelter to the all shelters page
+router.post('/', (req, res)=>{
+    const newShelter = new Shelter({
+        addressNumber: req.body.addressNumber,
+        streetName: req.body.streetName,
+        state: req.body.state,
+        //children: req.body.children???
+    })
 
+})
+// const shelterSchema = new Schema({
+//     addressNumber: Number,
+//     streetName: String, 
+//     state: String,
+//     city: String,  
+//     children: [Array]
+// })
 // SHOW
 
 // EDIT
