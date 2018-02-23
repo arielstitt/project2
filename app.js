@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 // method override 
 const methodOverride = require('method-override')
+const hbs = require('hbs')
 
 // REQUIRE CONTROLLERS
 var index = require('./controllers/index');
@@ -21,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI)
 const db = mongoose.connection
 // CHECK MONGODB CONNECTION
 db.on('open', ()=>{
-  console.log('successfully connected to mongoDB')
+  console.log('wee need to use these poop bags')
 })
 db.on('error', (err)=>{
   console.log(err)
@@ -43,7 +44,10 @@ app.use(methodOverride('_method'))
 // FIRST ARGUMENT: entry point for the controller
 // SECOND ARGUMENT: the controller itself
 app.use('/', index);
-app.use('/users', userController);
+app.use('/user', userController);
+app.use('/shelters', shelterController)
+// app.use('/shelters/:shelterId/children', childrenController)
+// app.use('')
 
 // catch 404 and forward to error handler
 app.use(function(req, res) {
