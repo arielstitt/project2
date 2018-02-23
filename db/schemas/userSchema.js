@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const userSchema = require('./userSchema')
+const childSchema = require('./childSchema')
+const shelterSchema = require('./shelterSchema')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({

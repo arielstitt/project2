@@ -6,19 +6,26 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 // method override 
 const methodOverride = require('method-override')
+
 // REQUIRE CONTROLLERS
 var index = require('./controllers/index');
-
+const userController = require('./controllers/userController')
 const childController = require('./controllers/childController')
-const shelterController = require('./shelterController')
+const shelterController = require('./controllers/shelterController')
 
-
+// REQUIRE EXPRESS AND CONNECT MONGOOSE DB
 var app = express();
 mongoose.connect(process.env.MONGODB_URI)
 const db = mongoose.connection
+// CHECK MONGODB CONNECTION
+db.on('open', ()=>{
+  console.log('successfully connected to mongoDB')
+})
+db.on('error', (err)=>{
+  console.log(err)
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,14 +40,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
 
-app.use('/', index);
-app.use('/users', users);
-
-
-
 // FIRST ARGUMENT: entry point for the controller
 // SECOND ARGUMENT: the controller itself
-
+app.use('/', index);
+app.use('/users', userController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res) {
