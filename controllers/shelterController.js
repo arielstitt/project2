@@ -23,24 +23,38 @@ router.get('/new', (req, res) => {
   })
 // CREATE
 // POST
-// save new shelter to the all shelters page
+
+
 router.post('/', (req, res)=>{
     const newShelter = new Shelter({
         addressNumber: req.body.addressNumber,
         streetName: req.body.streetName,
-        state: req.body.state,
+        state: req.body.state
         //children: req.body.children???
     })
-
+// save new shelter to the all shelters page
+    newShelter.save()
+    .then((savedShelter)=>{
+    // THEN redirect to the new shelters page
+    // Remember POST/PUT/PATCH/DELETE routes should not render or send anything
+    res.redirect(`/shelters/${savedShelter._id}`)
+    })
 })
-// const shelterSchema = new Schema({
-//     addressNumber: Number,
-//     streetName: String, 
-//     state: String,
-//     city: String,  
-//     children: [Array]
-// })
+
+
 // SHOW
+//GET
+
+router.get('/:id', (req, res)=>{
+    //find a single shelter
+    Shelter.findById(req.params.id).then((shelter) =>{
+        //render that into handlebars view and pass the shelter from our db into hbs
+        res.render('shelter/show', {
+            shelter: shelter
+        })
+    })
+})
+
 
 // EDIT
 // GET

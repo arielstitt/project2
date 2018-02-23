@@ -4,18 +4,17 @@ const db = mongoose.connection
 
 // MODEL IMPORT: un-comment after models folder is created and test
 
-const Shelter = require('../models/child')
-const Child = require('../models/shelter')
-
-
+const Shelter = require('../models/shelter')
+const Child = require('../models/child')
+const User = require('../models/user')
 
 // ADD AN ON OPEN PROMISE AND ERR
 mongoose.connect(process.env.MONGODB_URI)
 
-const db = on('open', ()=>{
+db.on('open', ()=>{
     console.log('Connected to MongoDB')
 })
-db.on('err', (err)=>{
+db.on('error', (err)=>{
     console.log(err)
 })
 
@@ -31,7 +30,7 @@ db.on('err', (err)=>{
 // })
 
 
-
+//test data
 const athena = new Shelter({
     shelterName: 'Athena',
     addressNumber: 123,
@@ -39,3 +38,40 @@ const athena = new Shelter({
     state: 'GA',
     city: 'Atlanta'
 })
+
+// remove all shelters
+Shelter.remove().then(()=>{
+    //save multiple shelters to the database
+    //return Shelter.insertMany([athena])
+    console.log(athena)
+    athena.save()
+})
+.then(()=>{
+    //close the database
+    console.log('Saved Successfully')
+    db.close()
+}).catch((err)=>{
+    console.log(err)
+    db.close()
+})
+
+// // remove all Sodas
+// Soda.remove().then(() => {
+
+//     // THEN remove all Companies
+//     return Company.remove()
+//   }).then(() => {
+  
+//     // THEN save multiple companies to the database
+//     return Company.insertMany([ coke, pepsi ])
+//   }).then(() => {
+  
+//     // THEN close the database
+//     console.log('Saved Successfully')
+//     db.close()
+//   }).catch((err) => {
+  
+//     // If there are any errors, log it and then close the DB
+//     console.log(err)
+//     db.close()
+//   })
