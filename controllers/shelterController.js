@@ -15,8 +15,8 @@ router.get('/', (req, res)=>{
         })
     })
 })
-// NEW SHELTER PAGE----------------------//
-// GET
+// NEW SHELTER PAGE----------------------// GET//
+
 
 router.get('/new', (req, res) => {
 
@@ -24,8 +24,8 @@ router.get('/new', (req, res) => {
     res.render('shelter/new')
   })
 
-// CREATE SHELTER PAGE---------------------------//
-// POST
+// CREATE SHELTER PAGE--------------------// POST//
+
 
 router.post('/', (req, res)=>{
     const newShelter = new Shelter({
@@ -44,8 +44,8 @@ router.post('/', (req, res)=>{
 })
 
 
-// SHOW SHELTER PAGE--------------------------------//
-//GET
+// SHOW SHELTER PAGE---------------------------//GET//
+
 
 router.get('/:id', (req, res)=>{
     //find a single shelter
@@ -57,8 +57,8 @@ router.get('/:id', (req, res)=>{
     })
 })
 
-// EDIT SHELTER PAGE ----------------------------------//
-// GET
+// EDIT SHELTER PAGE ----------------------------// GET//
+
 
 router.get('/:id/edit', (req, res)=>{
     Shelter.findByID(req.params.id).then((shelter)=>{
@@ -70,11 +70,26 @@ router.get('/:id/edit', (req, res)=>{
 })
 
 
-// UPDATE
-// PUT/PATCH
+// UPDATE--------------------------------// PUT/PATCH
 
-// DESTROY 
-// DELETE
+
+router.patch('/:id', (req, res) => {
+    User.findByIdAndUpdate(req.params.id, {
+        addressNumber: req.body.addressNumber,
+        streetName: req.body.streetName,
+        state: req.body.state
+    }, {new: true}).then((updatedShelter) => {
+        res.redirect(`/shelters/${updatedShelter._id}`)
+    })
+})
+
+// DESTROY ------------------------ // DELETE
+
+router.delete('/:id', (req, res) => {
+    User.findByIdAndRemove(req.params.id).then(() => {
+      res.redirect('/shelters')
+    })
+  })
 
 
 module.exports = router
