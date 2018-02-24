@@ -61,8 +61,8 @@ router.get('/:id', (req, res)=>{
 
 
 router.get('/:id/edit', (req, res)=>{
-    Shelter.findByID(req.params.id).then((shelter)=>{
-        res.render('shelters/edit', {
+    Shelter.findById(req.params.id).then((shelter)=>{
+        res.render('shelter/edit', {
             id: req.params.id,
             shelter: shelter
         })

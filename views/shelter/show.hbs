@@ -2,8 +2,8 @@
     <h4>{{user.firstName}} {{user.lastName}}</h4>
     <h4>{{user.email}}</h4>
     <h4>{{user.phoneNumber}}</h4> --}}
-
-    <h1>{{shelter.shelterName}}</h1>
+<h1>Show HBS</h1>
+    <h2>{{shelter.shelterName}}</h2>
 
     <h4>{{shelter.addressNumber}} {{shelter.streetName}} </h4>
     <h4>{{shelter.city}},{{shelter.state}} </h4>
@@ -12,10 +12,10 @@
   
     
 
-<a href="/shelters"><button type="submit">Edit {{shelter.shelterName}} </button></a>
-<a href="/shelters"><button type="submit">Delete {{shelter.shelterName}} </button></a>
+<a href="/shelters/{{shelter._id}}/edit"><button type="submit">Edit {{shelter.shelterName}} </button></a>
+{{!-- <a href="/shelters"><button type="submit">Delete {{shelter.shelterName}} </button></a>
 <a href="/shelters"><button type="submit">Children</button></a>
-<a href="/shelters"><button type="submit">Back to All Shelters</button></a>
+<a href="/shelters"><button type="submit">Back to All Shelters</button></a> --}}
 
 
 
