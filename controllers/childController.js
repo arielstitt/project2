@@ -2,23 +2,52 @@ const express = require('express')
 const router = express.Router()
 const Child = require('../models/child')
 
+//INDEX CHILDREN
 
-// NEW
-// GET
+router.get('/', (req, res)=>{
+    Child.find().then((children)=>{
+        res.render('child/index', {
+            children: children
+        })
+    })
+})
 
-// CREATE
-// POST
+
+
+// NEW-------------------// GET
+
+
+
+
+
+
+// CREATE----------------// POST
+
+
+
+
+
 
 // SHOW
 
-// EDIT
-// GET
 
-// UPDATE
-// PUT/PATCH
 
-// DESTORY
-// DELETE
+
+
+// EDIT-----------------// GET
+
+
+
+
+
+// UPDATE---------------// PUT/PATCH
+
+
+
+
+
+
+// DESTORY-----------------// DELETE
 
 
 

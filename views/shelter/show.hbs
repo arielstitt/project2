@@ -13,9 +13,12 @@
     
 
 <a href="/shelters/{{shelter._id}}/edit"><button type="submit">Edit {{shelter.shelterName}} </button></a>
-{{!-- <a href="/shelters"><button type="submit">Delete {{shelter.shelterName}} </button></a>
-<a href="/shelters"><button type="submit">Children</button></a>
-<a href="/shelters"><button type="submit">Back to All Shelters</button></a> --}}
+
+<a href="/shelters"><button type="submit">Delete {{shelter.shelterName}} </button></a>
+
+<a href="/shelters/{{shelter._id}}/children/"><button type="submit">Children</button></a>
+
+<a href="/shelters"><button type="submit">Back to All Shelters</button></a>
 
 
 
