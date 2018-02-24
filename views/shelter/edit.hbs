@@ -1,33 +1,33 @@
 <h1>Edit Shelter</h1>
 
-<h2>Edit {{shelter.name}}</h2>
+<h2>Edit {{shelter.shelterName}}</h2>
 
 <form method="POST" action="/shelters">
   
   <div>
     <label for="name">Name of Shelter</label>
-    <input type="text" name="name">
+    <input type="text" name="name" value="{{shelter.shelterName}}">
   </div>
   
   <div>
     <label for="streetName">Street Name</label>
-    <input type="text" name="streetName">
+    <input type="text" name="streetName" value="{{shelter.streetName}}">
   </div>
 
   <div>
     <label for="state">State</label>
-    <input type="text" name="state">
+    <input type="text" name="state" value="{{shelter.state}}">
   </div>
 
   <div>
     <label for="city">City</label>
-    <input type="text" name="city">
+    <input type="text" name="city" value="{{shelter.city}}">
   </div>
-  
+
+<a href="/shelters/{{id}}">
+    <button>Submit</button>
+</a>  
 
 </form>
 
 
-<a href="/shelters/{{shelter._id}}">
-    <button>Submit</button>
-</a>

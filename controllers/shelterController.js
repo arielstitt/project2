@@ -31,15 +31,16 @@ router.post('/', (req, res)=>{
     const newShelter = new Shelter({
         shelterName: req.body.name,
         streetName: req.body.streetName,
-        state: req.body.state
-        //children: req.body.children???
+        state: req.body.state,
+        city: req.body.city
     })
+    console.log(newShelter)
 // save new shelter to the all shelters page
     newShelter.save()
     .then((savedShelter)=>{
     // THEN redirect to the new shelters page
     // Remember POST/PUT/PATCH/DELETE routes should not render or send anything
-    res.redirect(`/`)
+    res.redirect('/shelters')
     })
 })
 
@@ -81,6 +82,7 @@ router.patch('/:id', (req, res) => {
     }, {new: true}).then((updatedShelter) => {
         res.redirect(`/shelters/${updatedUser._id}`)
     })
+    
 })
 
 // DESTROY ------------------------ // DELETE
