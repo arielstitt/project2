@@ -22,7 +22,6 @@ db.on('error', (err)=>{
 
 // const shelterSchema = new Schema({
 //     shelterName: String,
-//     addressNumber: Number,
 //     streetName: String, 
 //     state: String,
 //     city: String,  
@@ -33,7 +32,6 @@ db.on('error', (err)=>{
 //test data
 const athena = new Shelter({
     shelterName: 'Athena',
-    addressNumber: 123,
     streetName: 'Mt. Olympous',
     state: 'GA',
     city: 'Atlanta'

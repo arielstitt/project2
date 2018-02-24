@@ -1,5 +1,33 @@
 <h1>Edit Shelter</h1>
 
-<a href="shelters/show">
+<h2>Edit {{shelter.name}}</h2>
+
+<form method="POST" action="/shelters">
+  
+  <div>
+    <label for="name">Name of Shelter</label>
+    <input type="text" name="name">
+  </div>
+  
+  <div>
+    <label for="streetName">Street Name</label>
+    <input type="text" name="streetName">
+  </div>
+
+  <div>
+    <label for="state">State</label>
+    <input type="text" name="state">
+  </div>
+
+  <div>
+    <label for="city">City</label>
+    <input type="text" name="city">
+  </div>
+  
+
+</form>
+
+
+<a href="/shelters/{{shelter._id}}">
     <button>Submit</button>
 </a>

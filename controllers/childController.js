@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Child = require('../models/child')
+const Shelter = require('../models/shelter')
+const User = require('../models/user')
+
 
 //INDEX CHILDREN
 
@@ -11,8 +14,6 @@ router.get('/', (req, res)=>{
         })
     })
 })
-
-
 
 // NEW-------------------// GET
 
