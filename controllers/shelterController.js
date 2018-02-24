@@ -4,7 +4,8 @@ const router = express.Router({mergeParams: true})
 const Shelter = require('../models/shelter')
 const User = require('../models/user')
 
-//index
+//INDEX SHELTER PAGE-----------------------------------//
+
 router.get('/', (req, res)=>{
     //get all shelters
     Shelter.find().then((shelters)=>{
@@ -14,16 +15,17 @@ router.get('/', (req, res)=>{
         })
     })
 })
-// NEW
+// NEW SHELTER PAGE----------------------//
 // GET
+
 router.get('/new', (req, res) => {
 
     // Just render a view, we don't need to inject any data from our server here
     res.render('shelter/new')
   })
-// CREATE
-// POST
 
+// CREATE SHELTER PAGE---------------------------//
+// POST
 
 router.post('/', (req, res)=>{
     const newShelter = new Shelter({
@@ -42,7 +44,7 @@ router.post('/', (req, res)=>{
 })
 
 
-// SHOW
+// SHOW SHELTER PAGE--------------------------------//
 //GET
 
 router.get('/:id', (req, res)=>{
@@ -55,19 +57,17 @@ router.get('/:id', (req, res)=>{
     })
 })
 
-// EDIT
+// EDIT SHELTER PAGE ----------------------------------//
 // GET
 
 router.get('/:id/edit', (req, res)=>{
     Shelter.findByID(req.params.id).then((shelter)=>{
-        res.render('shelter/edit', {
+        res.render('shelters/edit', {
             id: req.params.id,
             shelter: shelter
         })
     })
 })
-
-
 
 
 // UPDATE

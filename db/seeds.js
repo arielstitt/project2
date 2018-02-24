@@ -39,6 +39,7 @@ const athena = new Shelter({
     city: 'Atlanta'
 })
 
+
 // remove all shelters
 Shelter.remove().then(()=>{
     console.log("removed all things")
