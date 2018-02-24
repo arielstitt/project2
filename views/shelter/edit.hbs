@@ -2,8 +2,9 @@
 
 <h2>Edit {{shelter.shelterName}}</h2>
 
-<form method="POST" action="/shelters">
-  
+
+<form method="POST" action="/shelters/{{id}}?_method=POST">
+
   <div>
     <label for="name">Name of Shelter</label>
     <input type="text" name="name" value="{{shelter.shelterName}}">

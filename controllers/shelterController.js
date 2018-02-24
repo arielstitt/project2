@@ -35,11 +35,8 @@ router.post('/', (req, res)=>{
         city: req.body.city
     })
     console.log(newShelter)
-// save new shelter to the all shelters page
     newShelter.save()
     .then((savedShelter)=>{
-    // THEN redirect to the new shelters page
-    // Remember POST/PUT/PATCH/DELETE routes should not render or send anything
     res.redirect('/shelters')
     })
 })
@@ -70,9 +67,7 @@ router.get('/:id/edit', (req, res)=>{
     })
 })
 
-
 // UPDATE--------------------------------// PUT/PATCH
-
 
 router.patch('/:id', (req, res) => {
     User.findByIdAndUpdate(req.params.id, {
@@ -84,6 +79,8 @@ router.patch('/:id', (req, res) => {
     })
     
 })
+
+
 
 // DESTROY ------------------------ // DELETE
 

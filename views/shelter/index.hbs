@@ -2,14 +2,17 @@
 <h2>Mother of Horus Shelters</h2>
 
 <ul>
+{{!-- Inside our index.hbs file, add a link to our edit route that passes in the index/id of that item in the url --}}
+
     {{#each shelters}}
         <li>
             <a href="/shelters/{{_id}}">{{shelterName}}</a>
         </li>
+        <li>{{city}}, {{state}}</li>
     {{/each}}
     
 </ul>
 
 <a href="/shelters/new">Add New Shelter</a>
-
 <a href="/users/">Sign Out</a>
+
