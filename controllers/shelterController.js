@@ -69,18 +69,34 @@ router.get('/:id/edit', (req, res)=>{
 
 // UPDATE--------------------------------// PUT/PATCH
 
-router.patch('/:id', (req, res) => {
-    User.findByIdAndUpdate(req.params.id, {
+router.post('/:id', (req, res) => {
+    Shelter.findByIdAndUpdate(req.params.id, {
         shelterName: req.body.name,
         streetName: req.body.streetName,
-        state: req.body.state
+        state: req.body.state,
     }, {new: true}).then((updatedShelter) => {
-        res.redirect(`/shelters/${updatedUser._id}`)
+        console.log(req.params.id)
+        console.log(updatedShelter)
+        res.redirect(`/shelters/${updatedShelter.id}`)
     })
-    
+    .catch((err)=>{
+        console.log(err);
+    })
 })
 
-
+// router.patch('/:id', (req, res) => {
+//     User.findByIdAndUpdate(req.params.id, {
+//       username: req.body.username,
+//       image: req.body.image,
+//       email: req.body.email,
+//       firstName: req.body.firstName,
+//       lastName: req.body.lastName,
+//       phoneNumber: req.body.phoneNumber
+//     }, {new: true}).then((updatedUser) => {
+//       res.redirect(`/users/${updatedUser.id}`)
+//     })
+//   })
+  
 
 // DESTROY ------------------------ // DELETE
 
