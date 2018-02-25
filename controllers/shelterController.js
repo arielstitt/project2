@@ -84,24 +84,13 @@ router.post('/:id', (req, res) => {
     })
 })
 
-// router.patch('/:id', (req, res) => {
-//     User.findByIdAndUpdate(req.params.id, {
-//       username: req.body.username,
-//       image: req.body.image,
-//       email: req.body.email,
-//       firstName: req.body.firstName,
-//       lastName: req.body.lastName,
-//       phoneNumber: req.body.phoneNumber
-//     }, {new: true}).then((updatedUser) => {
-//       res.redirect(`/users/${updatedUser.id}`)
-//     })
-//   })
+
   
 
 // DESTROY ------------------------ // DELETE
 
 router.delete('/:id', (req, res) => {
-    User.findByIdAndRemove(req.params.id).then(() => {
+    Shelter.findByIdAndRemove(req.params.id).then(() => {
       res.redirect('/shelters')
     })
   })
