@@ -29,7 +29,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res)=>{
     const newShelter = new Shelter({
-        shelterName: req.body.name,
+        shelterName: req.body.shelterName,
         streetName: req.body.streetName,
         state: req.body.state,
         city: req.body.city
@@ -71,13 +71,13 @@ router.get('/:id/edit', (req, res)=>{
 
 router.post('/:id', (req, res) => {
     Shelter.findByIdAndUpdate(req.params.id, {
-        shelterName: req.body.name,
+        shelterName: req.body.shelterName,
         streetName: req.body.streetName,
         state: req.body.state,
     }, {new: true}).then((updatedShelter) => {
         console.log(req.params.id)
         console.log(updatedShelter)
-        res.redirect(`/shelters/${updatedShelter.id}`)
+        res.redirect(`/shelters/${updatedShelter._id}`)
     })
     .catch((err)=>{
         console.log(err);
@@ -94,6 +94,18 @@ router.delete('/:id', (req, res) => {
       res.redirect('/shelters')
     })
   })
+
+//   router.get('/:userId/delete_forReal', (req, res) => {
+//     const userId = req.params.userId
+//     User.findByIdAndRemove(userId)
+//     .then(user=>{
+//       res.redirect('/users')
+//       console.log('deleted user')
+//     }).catch(err=>{
+//       console.log('didnt delete')
+//     })
+//   })
+  
 
 
 module.exports = router
