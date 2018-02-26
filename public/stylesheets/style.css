@@ -10,4 +10,14 @@ div.main-box-center{
   width: 50%;
   background: aquamarine;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.main-text-center {
+  width: 80%;
+}
+div.main-box-login {
+  display: flex;
+  justify-content: center;
 }
