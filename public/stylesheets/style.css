@@ -87,8 +87,14 @@ img.image{
 img.show-img{
   width: 300px;
   height: 300px;
+  padding: 25px;
+  border-radius: 30%;
 }
 div.show-center{
     display: flex;
     justify-content: center;
+}
+div.button-container{
+  display: flex;
+  justify-content: space-around;
 }
