@@ -2,22 +2,35 @@ div.main-body {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background: slateblue;
+  background: url("/images/circle-kids.jpeg");
   justify-content: center;
   align-items: center;
+  background-size: cover;
 }
 div.main-box-center{
-  width: 50%;
+  width: 80%;
   background: aquamarine;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: .45;
+  position: absolute;
+  border-radius: 5%;
 }
 div.main-text-center {
   width: 80%;
+  position: relative;
+  
 }
 div.main-box-login {
   display: flex;
   justify-content: center;
+}
+div.main-box-title-center {
+  display: flex;
+  justify-content: center;
+}
+div.main-message{
+  padding: 20px;
 }
