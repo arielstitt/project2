@@ -9,3 +9,8 @@ https://enigmatic-headland-90376.herokuapp.com/
 
 ## WIREFRAMES
 
+https://github.com/arielstitt/project2/blob/master/wire-frames/wire-frames%20(1).jpg
+
+https://github.com/arielstitt/project2/blob/master/wire-frames/wire-frames%20(2).jpg
+
+https://github.com/arielstitt/project2/blob/master/wire-frames/wire-frames.jpg
