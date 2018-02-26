@@ -85,5 +85,10 @@ img.image{
 /* ======= SHELTER SHOW ========== */
 
 img.show-img{
-  width: 50%;
+  width: 300px;
+  height: 300px;
+}
+div.show-center{
+    display: flex;
+    justify-content: center;
 }
