@@ -49,6 +49,7 @@ router.post('/', (req, res)=>{
 router.get('/:id', (req, res)=>{
     //find a single shelter
     Shelter.findById(req.params.id).then((shelter) =>{
+        console.log(shelter)
         //render that into handlebars view and pass the shelter from our db into hbs
         res.render('shelter/show', {
             shelter: shelter

@@ -4,6 +4,10 @@
 
 
 <form method="POST" action="/shelters/{{id}}?_method=POST">
+  <div>
+    <label for="image">Image URL</label>
+    <input type="text" name="image" value="{{shelter.shelterImage}}">
+  </div>
 
   <div>
     <label for="name">Name of Shelter</label>
@@ -16,14 +20,16 @@
   </div>
 
   <div>
+    <label for="city">City</label>
+    <input type="text" name="city" value="{{shelter.city}}">
+  </div>
+
+  <div>
     <label for="state">State</label>
     <input type="text" name="state" value="{{shelter.state}}">
   </div>
 
-  <div>
-    <label for="city">City</label>
-    <input type="text" name="city" value="{{shelter.city}}">
-  </div>
+
 <input type="submit" value="Submit"/>
 <a href="/shelters/{{id}}">Cancel
 </a>  
