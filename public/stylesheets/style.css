@@ -71,3 +71,19 @@ div.submit {
 
 /* ======== SHELTER INDEX =========== */
 
+div.shelter-index-container {
+  background: beige;
+}
+ul.none{
+  list-style-type: none;
+}
+img.image{
+  width: 25%;
+}
+
+
+/* ======= SHELTER SHOW ========== */
+
+img.show-img{
+  width: 50%;
+}

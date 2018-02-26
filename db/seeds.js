@@ -55,24 +55,3 @@ Shelter.remove().then(()=>{
     console.log(err)
     db.close()
 })
-
-// // remove all Sodas
-// Soda.remove().then(() => {
-
-//     // THEN remove all Companies
-//     return Company.remove()
-//   }).then(() => {
-  
-//     // THEN save multiple companies to the database
-//     return Company.insertMany([ coke, pepsi ])
-//   }).then(() => {
-  
-//     // THEN close the database
-//     console.log('Saved Successfully')
-//     db.close()
-//   }).catch((err) => {
-  
-//     // If there are any errors, log it and then close the DB
-//     console.log(err)
-//     db.close()
-//   })

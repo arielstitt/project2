@@ -4,10 +4,13 @@ const Schema = mongoose.Schema
 
 const shelterSchema = new Schema({
     shelterImage: String,
-    shelterName: String,
-    streetName: String, 
+    shelterName: {
+        type: String,
+        default: "Default Name",
+    },
+    streetName: String,
     state: String,
-    city: String,  
+    city: String,
     // children: [Array]
 })
 
