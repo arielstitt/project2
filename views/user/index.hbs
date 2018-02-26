@@ -1,56 +1,43 @@
-<h1>User login</h1>
-
-{{!-- <ul>
-    {{#each users}}
-        <li>
-            <a href="/users/{{_id}}">{{name}}</a>
-        </li>
-    {{/each}}
-</ul> --}}
-
-{{!-- <div>
-    <label for="email">Email</label>
-    <input type="text" name="email">
-  </div>
-
-  <div>
-    <label for="password">Password</label>
-    <input type="text" name="password">
-  </div> --}}
-
-
-
-
-<div class="form-group row">
-  <label for="example-email-input" class="col-2 col-form-label">Email</label>
-  <div class="col-10">
-    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
-  </div>
-</div>
-
-
-<div class="form-group row">
-  <label for="example-password-input" class="col-2 col-form-label">Password</label>
-  <div class="col-10">
-    <input class="form-control" type="password" value="hunter2" id="example-password-input">
-  </div>
-</div>
-
-
-
-
-
-  <div class="user-index">
-    <div>
-        <a href="/shelters">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </a>
-    </div>
+<div class="login-box-container">
     
-
-    <div>
-        <a href="/">
-        <button>back to home page</button>
-        </a>
+    <div class="login-box-center">
+        <div class="user-login">
+            <h1>User Login</h1>
+        </div>
+        <div class="email">
+            <div class="user-index-center">   
+    <div class="form-group row">
+    <label for="example-email-input" class="col-2 col-form-label">Email</label>
+    <div class="col-10">
+        <input class="form-control" type="email" value="you@email.com">
     </div>
-  </div>
+    </div>
+</div>
+        </div>
+        <div class="password">
+    <div class="form-group row">
+    <label for="example-password-input" class="col-2 col-form-label">Password</label>
+    <div class="col-10">
+        <input class="form-control" type="password" value="">
+    </div>
+    </div>
+        </div>
+        <div class="submit">
+            <a href="/shelters">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </a>
+        </div>
+        <div class="home-page">
+            <a href="/">
+            <button class="btn btn-primary">Home Page</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
