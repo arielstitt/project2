@@ -31,6 +31,7 @@ db.on('error', (err)=>{
 
 //test data
 const athena = new Shelter({
+    shelterImage: 'http://www.seahaveninc.com/images/history/shelter-home.jpg'
     shelterName: 'Athena',
     streetName: 'Mt. Olympous',
     state: 'GA',

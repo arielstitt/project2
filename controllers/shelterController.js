@@ -29,6 +29,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res)=>{
     const newShelter = new Shelter({
+        shelterImage: req.body.shelterImage,
         shelterName: req.body.shelterName,
         streetName: req.body.streetName,
         state: req.body.state,
@@ -71,6 +72,7 @@ router.get('/:id/edit', (req, res)=>{
 
 router.post('/:id', (req, res) => {
     Shelter.findByIdAndUpdate(req.params.id, {
+        shelterImage: req.body.shelterImage,
         shelterName: req.body.shelterName,
         streetName: req.body.streetName,
         state: req.body.state,
