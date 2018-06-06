@@ -1,55 +1,56 @@
 const express = require('express')
 const router = express.Router()
+
 const Child = require('../models/child')
 const Shelter = require('../models/shelter')
 const User = require('../models/user')
 
 
 //INDEX CHILDREN
-
-router.get('/', (req, res)=>{
-    Child.find().then((children)=>{
+router.get('/', (req, res, next)=>{
+    Shelter.findById((shelter)=>{
+        const children = shelter.children
         res.render('child/index', {
             children: children
         })
     })
 })
 
-// NEW-------------------// GET
+    // NEW-------------------// GET
 
 
 
 
 
 
-// CREATE----------------// POST
+    // CREATE----------------// POST
 
 
 
 
 
 
-// SHOW
+    // SHOW
 
 
 
 
 
-// EDIT-----------------// GET
+    // EDIT-----------------// GET
 
 
 
 
 
-// UPDATE---------------// PUT/PATCH
+    // UPDATE---------------// PUT/PATCH
 
 
 
 
 
 
-// DESTORY-----------------// DELETE
+    // DESTORY-----------------// DELETE
 
 
 
-module.exports = router
+    module.exports = router

@@ -5,7 +5,8 @@ const shelterSchema = require('./shelterSchema')
 const childSchema = new Schema({
     firstName: String,
     lastName: String,
-    age: Number
+    age: Number, 
+    image: String
 })
 
 

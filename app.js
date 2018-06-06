@@ -46,15 +46,11 @@ app.use(methodOverride('_method'))
 app.use('/', index);
 app.use('/users', userController);
 app.use('/shelters', shelterController)
-// app.use('/shelters/:shelterId/children', childrenController)
-// app.use('')
+app.use('/shelters/:shelterId/children', childController)
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   var err = new Error('Oh shit! Whet happend?');
-//   err.status = 404;
-//   next(err);
-// });
+
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

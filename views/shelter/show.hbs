@@ -2,49 +2,48 @@
 <h1>Show HBS</h1> --}}
 
 
+<div class="show-background">
+    <div class="content-container">
+        <div class="show-center">
+            <img class="show-img" src="{{shelter.shelterImage}}" alt="poop">
+        </div>
+        <div class="show-center">
+            <h2>{{shelter.shelterName}}</h2>
+        </div>
 
-<div class="content-container">
-    
-    <div class="show-center">
-        <img class="show-img" src="{{shelter.shelterImage}}" alt="poop">
+        <div class="show-center">
+            <h4>{{shelter.streetName}} </h4>
+        </div>
+
+        <div class="show-center">
+            <p>{{shelter.city}}, {{shelter.state}} </p>
+        </div>
+
+
+
     </div>
-    <div class="show-center">
-        <h2>{{shelter.shelterName}}</h2>
+
+
+    {{!-- BUTTONS --}}
+    <div class="button-container">
+        <a href="/shelters/{{shelter._id}}/edit">
+            <button class="btn btn-success" type="submit">Edit {{shelter.shelterName}} </button>
+        </a>
+
+        <form action="/shelters/{{shelter.id}}?_method=DELETE" method="POST">
+
+            <button class="btn btn-danger" type="submit">
+                Delete {{shelter.shelterName}}
+            </button>
+
+        </form>
+
+        <a href="/shelters">
+            <button class="btn btn-default" type="submit">Back to All Shelters</button>
+        </a>
     </div>
-
-    <div class="show-center">
-        <h4>{{shelter.streetName}} </h4>
-    </div>
-
-    <div class="show-center">
-        <p>{{shelter.city}}, {{shelter.state}} </p>
-    </div>
-
-
 
 </div>
-
-
-{{!-- BUTTONS --}}
-<div class="button-container">
-    <a href="/shelters/{{shelter._id}}/edit">
-        <button class="btn btn-success" type="submit">Edit {{shelter.shelterName}} </button>
-    </a>
-
-    <form action="/shelters/{{shelter.id}}?_method=DELETE" method="POST">
-
-        <button class="btn btn-danger" type="submit">
-            Delete {{shelter.shelterName}}
-        </button>
-
-    </form>
-
-    <a href="/shelters">
-        <button class="btn btn-default" type="submit">Back to All Shelters</button>
-    </a>
-</div>
-
-
 {{!--
 <a href="/shelters/children">
     <button type="submit">Children</button>

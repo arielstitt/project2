@@ -1,47 +1,42 @@
-<h1>NEW HBS</h1>
-<h2>Add a New Shelter</h2>
-
-<form method="POST" action="/shelters">
-  
-  <div>
-    <label for="shelterName">Name of Shelter</label>
-    <input type="text" name="shelterName">
-  </div>
-  
+<div class="new-container
+">
   {{!-- <div>
-    <label
-     for="adressNumber">Address Number</label>
-    <input type="text" name="addressNumber">
+    <h2>Add a New Shelter</h2>
   </div> --}}
-  
-  <div>
-    <label for="streetName">Street Name</label>
-    <input type="text" name="streetName">
+
+  <div class="new-form-center">
+    <form method="POST" action="/shelters">
+
+      <div>
+        <label for="shelterName">Name of Shelter</label>
+        <input type="text" name="shelterName">
+      </div>
+
+      <div>
+        <label for="streetName">Street Name</label>
+        <input type="text" name="streetName">
+      </div>
+
+      <div>
+        <label for="city">City</label>
+        <input type="text" name="city">
+      </div>
+      
+      <div>
+        <label for="state">State</label>
+        <input type="text" name="state">
+      </div>
+
+
+      <div>
+        <label for="image">Image</label>
+        <input type="text" name="shelterImage">
+      </div>
+
+      <a href="/shelters">Cancel</a>
+      <button class="submit" type="submit">Add Shelter</button>
+    </form>
   </div>
+</div>
 
-  <div>
-    <label for="state">State</label>
-    <input type="text" name="state">
-  </div>
-
-  <div>
-    <label for="city">City</label>
-    <input type="text" name="city">
-  </div>
-  <div>
-    <label for="image">Image</label>
-    <input type="text" name="shelterImage">
-  </div>
-  
-  <a href="/">home</a>
-  <button class="submit" type="submit">Add Shelter</button>
-</form>
-
-
-
-
-    {{!-- addressNumber: Number,
-    streetName: String, 
-    state: String,
-    city: String,  
-    children: [Array] --}}
+{{!-- addressNumber: Number, streetName: String, state: String, city: String, children: [Array] --}}

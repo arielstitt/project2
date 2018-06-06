@@ -73,12 +73,15 @@ div.submit {
 
 div.shelter-index-container {
   background: beige;
+  height: 100vh;
+  width: 100vw;
 }
 ul.none{
   list-style-type: none;
 }
 img.image{
   width: 25%;
+  border-radius: 10%;
 }
 
 
@@ -97,4 +100,20 @@ div.show-center{
 div.button-container{
   display: flex;
   justify-content: space-around;
+}
+div.show-background{
+  height: 100vh;
+  width: 100vw;
+  background: beige;
+}
+
+/* ====== SHELTER NEW ====== */
+
+div.new-container {
+  height: 100vh;
+  width: 100vw;
+  background: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

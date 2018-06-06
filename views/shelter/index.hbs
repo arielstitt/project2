@@ -8,25 +8,31 @@
         <div class="shelter-container">
             <div>
                 <li>
-                    <a href="/shelters/{{_id}}">{{shelterName}}</a>
+                    <h2>
+                        <a href="/shelters/{{_id}}">{{shelterName}}</a>
+                    </h2>
                 </li>
                 <li>
-                    <a href="/shelters/{{_id}}""><img class="image" src="{{shelterImage}}" alt="no img"></a>
+                    <a href="/shelters/{{_id}}" "><img class="image" src="{{shelterImage}} " alt="no img "></a>
                 </li>
-                <li>{{city}}, {{state}}</li>
+                <li>
+                    <h3>{{city}}, {{state}}</h3>
+                </li>
 
             </div>
         </div>
 
         {{/each}}
 
-    </ul>
+</ul>
 
-    <a href="/shelters/new">
-        <button class="btn btn-success">Add New Shelter</button>
-    </a>
-    <a href="/users">
-        <button class="btn btn-warning"> Sign Out
-        </button>
-    </a>
+    <div class="button-bottom ">
+        <a href="/shelters/new ">
+            <button class="btn btn-success ">Add New Shelter</button>
+        </a>
+        <a href="/users ">
+            <button class="btn btn-warning "> Sign Out
+            </button>
+        </a>
+    </div>
 </div>
