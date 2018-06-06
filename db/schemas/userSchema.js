@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const childSchema = require('./childSchema')
+const kidSchema = require('./kidSchema')
 const shelterSchema = require('./shelterSchema')
 const Schema = mongoose.Schema
 

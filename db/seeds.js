@@ -5,7 +5,7 @@ const db = mongoose.connection
 // MODEL IMPORT: un-comment after models folder is created and test
 
 const Shelter = require('../models/shelter')
-const Child = require('../models/child')
+const Child = require('../models/kid')
 const User = require('../models/user')
 
 // ADD AN ON OPEN PROMISE AND ERR
@@ -38,7 +38,7 @@ const athena = new Shelter({
     streetName: 'Mt. Olympous',
     state: 'GA',
     city: 'Atlanta',
-    children: [ child1, child2 ]
+    kids: [ child1, child2 ]
 })
 
 

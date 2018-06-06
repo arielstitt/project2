@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const shelterSchema = require('./shelterSchema')
 
-const childSchema = new Schema({
+const kidSchema = new Schema({
     firstName: String,
     lastName: String,
     age: Number, 
@@ -12,4 +12,4 @@ const childSchema = new Schema({
 
 
 
-module.exports = childSchema
+module.exports = kidSchema

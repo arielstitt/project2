@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const childSchema = require('./childSchema')
+const kidSchema = require('./kidSchema')
 const Schema = mongoose.Schema
 
 const shelterSchema = new Schema({
@@ -8,7 +8,7 @@ const shelterSchema = new Schema({
     streetName: String,
     state: String,
     city: String,
-    children: [ childSchema ]
+    kids: [ kidSchema ]
 })
 
 

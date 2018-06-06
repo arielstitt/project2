@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
-const childSchema = require('../db/schemas/childSchema')
+const kidSchema = require('../db/schemas/kidSchema')
 
 
 
 //apply exisiting schema to a mongoose model names company
-const Child = mongoose.model('child', childSchema)
+const Kid = mongoose.model('kid', kidSchema)
 
 //allows methods like findById, create...
 
 
 
-module.exports = Child
+module.exports = Kid
