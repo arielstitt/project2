@@ -19,14 +19,14 @@ db.on('error', (err) => {
 })
 
 const child1 = new Child({
-    fistName: "Maria",
+    firstName: "Maria",
     lastName: "Sanchez",
     age: 13,
     image: "https://www.eriefamilyhealth.org/wp-content/uploads/2016/01/teen-contact-hero.jpg"
 })
 
 const child2 = new Child({
-    fistName: "Eric",
+    firstName: "Eric",
     lastName: "Johnson",
     age: 17,
     image: "https://s-i.huffpost.com/gen/5137348/thumbs/o-TEENAGE-BOY-900.jpg?15"

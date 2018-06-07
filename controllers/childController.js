@@ -38,7 +38,16 @@ router.get('/', (req, res, next) => {
   //get the sheleter by ID 
   //then get the child by id
   //render the child show page
-
+router.get('/childId', (req, res)=>{
+  Shelter.findById(req.params.id)
+  .then((shelter)=>{
+    const child = shelter.children.id(req.params.id)
+    res.render('kid/show', {
+      shelterid: req.params.id,
+      child: child
+    })
+  })
+})
 
 
 
