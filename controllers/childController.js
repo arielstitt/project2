@@ -21,7 +21,9 @@ router.get('/', (req, res, next) => {
   
 
     // NEW-------------------// GET
-
+  router.get('/new', (req, res)=>{
+    
+  })
 
 
 
