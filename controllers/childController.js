@@ -35,7 +35,9 @@ router.get('/', (req, res, next) => {
 
 
     // SHOW
-
+  //get the sheleter by ID 
+  //then get the child by id
+  //render the child show page
 
 
 
