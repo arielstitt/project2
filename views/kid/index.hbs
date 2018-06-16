@@ -1,11 +1,10 @@
 {{#each kids}}
 <ul>
-    <li>{{firstName}}</li>
-    <li> {{lastName}} </li>
+    <li>{{firstName}} {{lastName}}</li>
     <li> {{age}} </li>
     <li>
         <img src="{{image}}" alt="kids image">
     </li>
-
+<a href="/shelters/{{../shelterId}}/kids/{{_id}}"><button> {{firstName}}'s Profile </button></a>
 </ul>
 {{/each}}

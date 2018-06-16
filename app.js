@@ -46,7 +46,7 @@ app.use(methodOverride('_method'))
 app.use('/', index);
 app.use('/users', userController);
 app.use('/shelters', shelterController)
-app.use('/shelters/:shelterId/children', childController)
+app.use('/shelters/:shelterId/kids', childController)
 
 
 

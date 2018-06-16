@@ -8,7 +8,8 @@ const User = require('../models/user')
 
 router.get('/', (req, res) => {
     //get all shelters
-    Shelter.find().then((shelters) => {
+    Shelter.find()
+    .then((shelters) => {
         // send all the companies to the hbs file called index in the views/shelter directory
 
         if (req.get('Content-Type') === 'application/json') {
@@ -45,7 +46,6 @@ router.post('/', (req, res) => {
         state: req.body.state,
         city: req.body.city
     })
-    console.log(newShelter)
     newShelter.save()
         .then((savedShelter) => {
 
@@ -60,8 +60,7 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
     //find a single shelter
     Shelter.findById(req.params.id).then((shelter) => {
-        console.log(shelter)
-        //render that into handlebars view and pass the shelter from our db into hbs
+                //render that into handlebars view and pass the shelter from our db into hbs
         if (req.get('Content-Type') === 'application/json') {
             return res.send(shelter)
         } else {
@@ -94,8 +93,7 @@ router.post('/:id', (req, res) => {
         streetName: req.body.streetName,
         state: req.body.state,
     }, { new: true }).then((updatedShelter) => {
-        console.log(req.params.id)
-        console.log(updatedShelter)
+       
         res.redirect(`/shelters/${updatedShelter._id}`)
     })
         .catch((err) => {
